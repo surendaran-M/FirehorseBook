@@ -1,0 +1,23 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:FireHorse >------------------------
+[INFO] Building FireHorse 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.0:clean (default-clean) @ FireHorse ---
+[INFO] Deleting C:\Users\king\Desktop\? fire-horse-books\coding\?backend (Spring Boot)\FireHorse\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ FireHorse ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ FireHorse ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 19 source files with javac [debug parameters release 17] to target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.714 s
+[INFO] Finished at: 2026-02-12T14:56:02+05:30
+[INFO] ------------------------------------------------------------------------
