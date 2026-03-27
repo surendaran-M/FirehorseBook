@@ -5,8 +5,11 @@ import { mockBooks, mockUsers } from './mockData';
 // const BASE_URL = "http://localhost:8080";
 
 // To this:
+// Line 8: Keep this as is (it's looking for your Vercel/Railway variable)
 const BASE_URL = import.meta.env.VITE_API_URL || "https://firehorsebook-production.up.railway.app";
-const USE_MOCK_DATA = true; // Set to true for development without backend
+
+// Line 9: CHANGE THIS FROM true TO false
+const USE_MOCK_DATA = false; Set to true for development without backend
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
