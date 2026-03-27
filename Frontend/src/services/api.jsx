@@ -9,7 +9,7 @@ import { mockBooks, mockUsers } from './mockData';
 const BASE_URL = import.meta.env.VITE_API_URL || "https://firehorsebook-production.up.railway.app";
 
 // Line 9: CHANGE THIS FROM true TO false
-const USE_MOCK_DATA = false; Set to true for development without backend
+const USE_MOCK_DATA = false; //Set to true for development without backend
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
