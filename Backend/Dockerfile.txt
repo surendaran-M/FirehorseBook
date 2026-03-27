@@ -1,0 +1,14 @@
+# Step 1: Use a Maven image to build the project
+FROM maven:3.8.5-openjdk-17 AS build
+COPY . .
+RUN mvn clean package -DskipTests
+
+# Step 2: Use a lightweight Java image to run the project
+FROM openjdk:17-jdk-slim
+COPY --from=build /target/*.jar app.jar
+
+# Open the port your Spring Boot app runs on (usually 8080)
+EXPOSE 8080
+
+# The command to start your application
+ENTRYPOINT ["java","-jar","app.jar"]
