@@ -1,9 +1,12 @@
 // services/api.jsx - COMPLETE FIXED VERSION
 
 import { mockBooks, mockUsers } from './mockData';
+// Change this:
+// const BASE_URL = "http://localhost:8080";
 
-const BASE_URL = "http://localhost:8080";
-const USE_MOCK_DATA = false; // Set to true for development without backend
+// To this:
+const BASE_URL = import.meta.env.VITE_API_URL || "https://firehorsebook-production.up.railway.app";
+const USE_MOCK_DATA = true; // Set to true for development without backend
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
