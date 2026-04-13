@@ -1,18 +1,13 @@
-# Step 1: Use a Maven image to build the project
+# Step 1: Build the project
 FROM maven:3.8.5-openjdk-17 AS build
-
-# Change this to the actual folder name in your repo
-# If your code is in a folder called 'Backend', use:
-COPY Backend /app
 WORKDIR /app
-
-# Run the build inside that directory
+# Use . because you are already inside the Backend folder
+COPY . .
 RUN mvn clean package -DskipTests
 
-# Step 2: Use a lightweight Java image to run the project
+# Step 2: Run the project
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-# Pull the jar from the build stage
 COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
